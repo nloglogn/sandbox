@@ -30,37 +30,6 @@ so that
 P(\{ \sigma \};\{ \sigma^\prime \}) = P(\{ \sigma^\prime \} | \{ \sigma \}) P_{\mathrm{stat}}(\{ \sigma \}) = \frac{\exp( \sum_{i=1}^N h_i \sigma_i + \sum_{i,j = 1}^N J_{ij} \sigma_i \sigma_j + \sum_{i,j = 1}^N J_{ij}^\mathrm{1} \sigma^\prime \sigma )}{Z(\{ \sigma^\prime\})}P_{\mathrm{stat}}(\{ \sigma^\prime \}), \tag{3}
 \end{equation}
 
-where the parameters $J_{ij}$ can be interpreted as barometer of connectedness between $i$-th and $j$-th person. Our ultimate purpose is to estimate this parameters.
-
-We apply the approximation for $Z (\{ \sigma^\prime \})$ up to the second order:
-
-\begin{equation}
-\log(Z (\{ \sigma^\prime \})) \approx \log(Z_{\mathrm{eff}}) - \sum_{i=1}^N h_i^r \sigma_i^\prime - \sum_{i,j=1}^N J_{ij}^r \sigma_i^\prime \sigma_j^\prime \tag{4}
-\end{equation}
-
-Using this formulation we can write the righ side of the equation (3) as follows:
-
-\begin{equation}
-P(\{\sigma\} | \{\sigma^\prime\}) = \frac{1}{Z_{\mathrm{eff}}} \exp \left( \sum_{i=1}^N h_i\sigma_i + \sum_{i,j=1}^N J_{ij} \sigma_i \sigma_j + \sum_{i,j=1}^N J_{ij}^\mathrm{1} \sigma_i^\prime \sigma_j + \sum_{i=1}^N h_i^r \sigma_i^\prime + \sum_{i,j=1}^N J_{ij}^r \sigma_i^\prime \sigma_j^\prime \right) . \tag{5}
-\end{equation}
-
-Using the detailed balance, the stationary distribution is also restricted to the second order. $P_\mathrm{stat}$ is represented as follows:
-
-\begin{equation}
-P_\mathrm{stat} (\{\sigma\}) = \frac{\exp (\sum{i=1}^N h_i^\mathrm{stat} \sigma_i + \sum_{i,j=1}^N J_{ij}^\mathrm{stat} \sigma_i \sigma_j)}{\sum_{\{ \sigma^{\prime \prime} \} \exp (\sum_{i=1}^N h_i^\mathrm{stat} \sigma_i^{\prime \prime} + \sum_{i,j=1}^N J_{ij}^\mathrm{stat} \sigma_i^{\prime \prime} \sigma_j^{\prime \prime})}, \tag{6}
-\end{equation}
-
-where the sum $\sum_{\{\sigma^{\prime \prime}\}}$ is the sum about all the value each elements of the set $\{ \sigma^{\prime \prime}\} = \{ \sigma_1^{\prime \prime}, \dots , \sigma_N^{\prime \prime} \}$ can take.
-
-Furthermore, we note that this equation holds:
-
-\begin{equation}
-P_{\mathrm{stat}}(\{\sigma\}) = \sum_{\{ \sigma^\prime \}} P(\{ \sigma \} | \{ \sigma^\prime \}) P_\mathrm{stat} (\{ \sigma^\prime \}). \tag{7}
-\end{equation}
-
-The parameters $\{ h_i^\mathrm{stat}, J_{ij}^\mathrm{stat} \}_{i,j=1}^N$ are fully determined by the values of $m_i$ and $C_{ij}$, but we evaluate these parameters using numerical technique.
-
-
 
 ### Limitation
 We must suppose Markovian hypothesis. Thus, the propagation process must be dependent only on the current status.
